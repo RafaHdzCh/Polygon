@@ -213,6 +213,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   coinsCollected: {fileID: 0}
   coinSound: {fileID: 3461248452162151639}
+  coinCollider: {fileID: 8966179099399017651}
+  coinRenderer: {fileID: 5444223473160370157}
 --- !u!82 &3461248452162151639
 AudioSource:
   m_ObjectHideFlags: 0
@@ -390,6 +392,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2ed830309d1c9f640a65bf22d9060af1, type: 3}
+--- !u!23 &5444223473160370157 stripped
+MeshRenderer:
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 2ed830309d1c9f640a65bf22d9060af1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5444223473162530701}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5444223473162663181 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 2ed830309d1c9f640a65bf22d9060af1,

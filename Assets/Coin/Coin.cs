@@ -7,6 +7,8 @@ public class Coin : MonoBehaviour
 	public static int coinsCount = 0;
     [SerializeField] TextMeshProUGUI coinsCollected;
     [SerializeField] AudioSource coinSound;
+    [SerializeField] Collider coinCollider;
+    [SerializeField] Renderer coinRenderer;
 
     void Start()
     {
@@ -23,6 +25,9 @@ public class Coin : MonoBehaviour
     	if (otherCollider.CompareTag("Player")==true)
     	{
             coinSound.Play();
+            coinCollider.enabled = false;
+            coinRenderer.enabled = false;
+            
             coinsCount--;
     			if (coinsCount==0)
     			{
@@ -35,7 +40,7 @@ public class Coin : MonoBehaviour
     						fireworks.GetComponent<ParticleSystem>().Play();
     					}
     			}
-    		Destroy(gameObject);
+    		Destroy(gameObject, 1f);
     	}
     }
 }
